@@ -1,0 +1,209 @@
+.boxes {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-child {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  /* border: 2px solid black; */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  max-width: 1200px;
+}
+
+.box-child img {
+  width: 350px;
+  padding: 20px 0;
+  border-radius: 20px;
+}
+
+.box-child p {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: black;
+}
+.box-images-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 40px 0;
+}
+
+.input-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: -220px;
+  left: 80px;
+  background-color: rgb(255, 255, 255, 0.2);
+  padding: 20px;
+  position: absolute;
+  width: 60%;
+  box-shadow: 2px 4px 4px 2px white;
+}
+.input-relative {
+  position: relative;
+}
+
+.input {
+  border: none;
+  border-bottom: 2px solid #63bf43;
+  padding: 10px;
+  outline: none !important;
+}
+.input-button {
+  padding: 2px 1px;
+  border: 2px solid #63bf43;
+  color: white;
+  background-color: #63bf43;
+  font-weight: 600;
+}
+.input-button:hover {
+  background-color: #3f8f25;
+}
+
+.menu-header {
+  color: #f0e1e1;
+  cursor: pointer;
+  border: solid 2px #63bf43;
+  border-radius: 100%;
+  background-color: #63bf43;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.menu-header:hover {
+  background-color: #3f8f25;
+  border: solid 2px #3f8f25;
+}
+
+.button-header {
+  margin: 8px;
+  padding: 8px;
+  border: 2px solid #63bf43;
+  background-color: #63bf43;
+  color: #f0e1e1;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.button-header:hover {
+  cursor: pointer;
+  background-color: #3f8f25;
+  border: 2px solid #3f8f25;
+}
+
+#serviceContainer {
+  position: absolute;
+  background: #63bf43;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none;
+  z-index: 100000;
+  top: -500px;
+}
+
+.il-option,
+.ilce-option {
+  padding: 10px;
+  cursor: pointer;
+  background: white; /* Set a default background for individual options */
+}
+
+.il-option:hover,
+.ilce-option:hover {
+  background-color: #d1f0d1; /* A slightly darker shade of green on hover */
+}
+
+.service-input {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+.district-container {
+  background-color: #63bf43 !important;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  top: 55px;
+  z-index: 10;
+  display: none;
+  width: 82%;
+  scrollbar-width: none;
+}
+
+.district-container div {
+  padding: 10px; /* İçerik için boşluk */
+  cursor: pointer; /* İmleçin şekli */
+  z-index: 10000;
+  background-color: #63bf43;
+}
+
+.district-container div:hover {
+  background-color: #f0f0f0; /* Üzerine gelindiğinde arka plan rengi */
+}
+
+@media (max-width: 720px) {
+  .box-images-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5px 0;
+  }
+  .box-child img {
+    width: 400px;
+    padding: 20px 0;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .box-child img {
+    width: 300px;
+    padding: 20px 0;
+    border-radius: 20px;
+  }
+  .box-images-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 5px 0;
+  }
+  .input-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: -180px;
+    left: 50px;
+    background-color: rgb(255, 255, 255, 0.2);
+    padding: 10px;
+    position: absolute;
+    width: 60%;
+    box-shadow: 2px 4px 4px 2px white;
+  }
+  .input-button {
+    padding: 2px 1px;
+    border: 2px solid #63bf43;
+    color: white;
+    background-color: #63bf43;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
