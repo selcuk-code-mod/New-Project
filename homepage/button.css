@@ -1,0 +1,66 @@
+.contact-nav-btn {
+  background-color: #63bf43;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: 1px solid #63bf43;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+.contact-nav-btn:hover {
+  background-color: #3f8f25;
+}
+
+.contact-btn {
+  background-color: #63bf43;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #63bf43;
+  max-width: 50%;
+  padding: 10px;
+}
+.contact-btn:hover {
+  background-color: #3f8f25;
+}
+
+.menu-header-btn {
+  color: #f0e1e1;
+  cursor: pointer;
+  border: solid 2px #63bf43;
+  border-radius: 100%;
+  background-color: #63bf43;
+  font-size: 2rem;
+  padding: 10px;
+  display: none;
+}
+
+.menu-header-btn:hover {
+  background-color: #3f8f25;
+  border: solid 2px #3f8f25;
+}
+
+@media (max-width: 1000px) {
+  .menu-header-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-btn {
+    background-color: #63bf43;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #63bf43;
+    max-width: 80%;
+    padding: 10px;
+  }
+  .contact-nav-btn {
+    background-color: #63bf43;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #63bf43;
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+}

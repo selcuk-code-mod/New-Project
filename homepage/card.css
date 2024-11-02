@@ -1,0 +1,111 @@
+.section-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.card:hover {
+  box-shadow: 3px 3px 3px 3px #63bf43;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-content {
+  color: #969696;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.fa-regular,
+.fa-truck,
+.fa-screwdriver-wrench,
+.fa-house,
+.fa-book-open-reader,
+.fa-plane-arrival {
+  background-color: #63bf43;
+  font-size: 2rem;
+  border-radius: 100%;
+  padding: 20px;
+}
+
+.communication {
+  padding: 4rem 0px;
+}
+
+.section-card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+.card-content-footer {
+  color: #969696;
+  padding-left: 2.5rem;
+}
+
+.mail {
+  color: #969696;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+}
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+}
+.card-image-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.9rem;
+}
+.fa-location-dot,
+.fa-envelope,
+.fa-phone,
+.fa-clock {
+  color: #63bf43;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 875px) {
+  .section-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .section-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+}

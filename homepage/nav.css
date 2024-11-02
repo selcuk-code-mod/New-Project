@@ -65,6 +65,55 @@
   display: block;
   opacity: 1;
 }
+.overlay-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  border-radius: 20px;
+}
 .logo img {
   width: 200px;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+}
+.active-drawer {
+  border-bottom: 2px solid #63bf43;
+}
+.navbar-xl {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+.navbar-xl-list {
+  display: flex;
+  color: black;
+}
+
+.navbar-xl-list ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-top: 12px;
+}
+.navbar-xl-list ul li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+.navbar-xl-list ul li a:hover {
+  border-bottom: 2px solid #63bf43;
+}
+
+@media (max-width: 1000px) {
+  .navbar-xl-list {
+    display: none;
+  }
 }

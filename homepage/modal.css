@@ -89,3 +89,55 @@
 .img {
   max-width: 50px;
 }
+
+@media (max-width: 640px) {
+  .container {
+    margin: 10px 20px;
+  }
+  .hero-sections p {
+    padding: 8px;
+  }
+
+  .modal {
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  .modal-container {
+    margin-top: 20px;
+  }
+
+  img {
+    max-width: 40px;
+  }
+  .modal-title {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+  }
+  .modal-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 400px;
+    max-height: 120px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+  #close {
+    position: absolute !important;
+    top: -180px !important;
+    left: -20px !important;
+    border-radius: 20px;
+    padding: 12px;
+    color: #000;
+    border: 1px solid #fff;
+  }
+
+  .closed {
+    position: relative !important;
+  }
+}
