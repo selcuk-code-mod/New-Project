@@ -23,42 +23,36 @@ close.addEventListener("click", () => {
   modalHeader.classList.remove("show");
 });
 
-const serviceInputs = document.querySelectorAll(".input");
-const serviceContainers = document.querySelectorAll(".service-container");
-const districtContainers = document.querySelectorAll(".district-container");
-
 let allData = [];
+
+const serviceInputs = document.querySelectorAll(".input");
+
+serviceInputs.forEach((input) => {
+  const serviceContainer = document.createElement("div");
+  serviceContainer.classList.add("service-container");
+  input.parentNode.insertBefore(serviceContainer, input.nextSibling);
+
+  const districtContainer = document.createElement("div");
+  districtContainer.classList.add("district-container");
+  input.parentNode.insertBefore(districtContainer, input.nextSibling);
+
+  input.addEventListener("input", (event) =>
+    handleInput(event, serviceContainer, districtContainer)
+  );
+});
 
 async function fetchData() {
   try {
     const response = await fetch("data.json");
     if (!response.ok) throw new Error("Network response was not ok");
     allData = await response.json();
-
-    serviceInputs.forEach((input, index) => {
-      input.addEventListener("input", (event) => handleInput(event, index));
-    });
   } catch (error) {
     console.error("Error loading JSON data:", error);
   }
 }
 
-function normalizeText(text) {
-  return text
-    .replace(/ı/g, "i")
-    .replace(/ğ/g, "g")
-    .replace(/ü/g, "u")
-    .replace(/ş/g, "s")
-    .replace(/ç/g, "c")
-    .replace(/ö/g, "o")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-}
-
-function handleInput(event, index) {
+function handleInput(event, serviceContainer, districtContainer) {
   const inputText = normalizeText(event.target.value);
-  const serviceContainer = serviceContainers[index];
   serviceContainer.innerHTML = "";
 
   const filteredData = allData.filter((ilData) =>
@@ -74,9 +68,9 @@ function handleInput(event, index) {
         ilDiv.classList.add("il-option");
 
         ilDiv.addEventListener("click", function () {
-          serviceInputs[index].value = ilData.il;
+          event.target.value = ilData.il;
           serviceContainer.style.display = "none";
-          showDistricts(ilData.ilceler, index);
+          showDistricts(ilData.ilceler, districtContainer, event.target);
         });
 
         serviceContainer.appendChild(ilDiv);
@@ -89,8 +83,7 @@ function handleInput(event, index) {
   }
 }
 
-function showDistricts(districts, index) {
-  const districtContainer = districtContainers[index];
+function showDistricts(districts, districtContainer, inputField) {
   districtContainer.innerHTML = "";
 
   districts.forEach((district) => {
@@ -99,9 +92,7 @@ function showDistricts(districts, index) {
     districtDiv.classList.add("ilce-option");
 
     districtDiv.addEventListener("click", function () {
-      serviceInputs[
-        index
-      ].value = `${serviceInputs[index].value} - ${district}`;
+      inputField.value = `${inputField.value} - ${district}`;
       districtContainer.style.display = "none";
     });
 
@@ -109,6 +100,10 @@ function showDistricts(districts, index) {
   });
 
   districtContainer.style.display = "block";
+}
+
+function normalizeText(text) {
+  return text.trim().toLowerCase();
 }
 
 fetchData();

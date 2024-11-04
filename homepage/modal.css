@@ -6,8 +6,8 @@
   align-items: center;
   flex-direction: column;
 }
-.modal {
-  display: flex;
+#modal-header {
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,7 @@
 #modal-header.show {
   pointer-events: auto;
   opacity: 0.93;
+  display: flex;
 }
 .modal-content {
   display: flex;
@@ -56,9 +57,6 @@
   flex-direction: column;
   gap: 1px;
   padding: 0px 10px;
-}
-.modal-content h2 {
-  color: #ac4b4b;
 }
 
 .telephone {

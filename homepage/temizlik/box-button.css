@@ -105,28 +105,28 @@
   border: 2px solid #3f8f25;
 }
 
-#serviceContainer {
+.service-container {
   position: absolute;
-  background: #63bf43;
+  background: #63bf43 !important;
   border: 1px solid #ccc;
-  width: 100%;
+  width: 82%;
   max-height: 150px;
   overflow-y: auto;
-  display: none;
-  z-index: 100000;
-  top: -500px;
+  z-index: 100;
+  top: 55px;
+  scrollbar-width: none;
 }
 
 .il-option,
 .ilce-option {
   padding: 10px;
   cursor: pointer;
-  background: white; /* Set a default background for individual options */
+  background-color: #63bf43;
 }
 
 .il-option:hover,
 .ilce-option:hover {
-  background-color: #d1f0d1; /* A slightly darker shade of green on hover */
+  background-color: #f6f9fe;
 }
 
 .service-input {
@@ -143,20 +143,19 @@
   position: absolute;
   top: 55px;
   z-index: 10;
-  display: none;
   width: 82%;
   scrollbar-width: none;
 }
 
 .district-container div {
-  padding: 10px; /* İçerik için boşluk */
-  cursor: pointer; /* İmleçin şekli */
+  padding: 10px;
+  cursor: pointer;
   z-index: 10000;
   background-color: #63bf43;
 }
 
 .district-container div:hover {
-  background-color: #f0f0f0; /* Üzerine gelindiğinde arka plan rengi */
+  background-color: #f0f0f0;
 }
 
 @media (max-width: 720px) {
@@ -205,5 +204,10 @@
     background-color: #63bf43;
     font-weight: 400;
     font-size: 12px;
+  }
+  .district-container,
+  .service-container {
+    width: 89%;
+    top: 45px;
   }
 }
