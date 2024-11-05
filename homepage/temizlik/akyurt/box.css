@@ -15,8 +15,7 @@
   gap: 0.5rem;
 }
 .box-child:hover {
-  box-shadow: 3px 3px 3px 3px #fff;
-  background-color: #75c25b;
+  box-shadow: 3px 6px 3px 3px #fff;
 }
 .box-content {
   display: flex;
