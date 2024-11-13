@@ -89,19 +89,24 @@ div .images {
   padding: 60px 0;
 }
 
-.hit-services .h1 {
+.h3 {
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+}
+.communication {
+  text-align: center;
 }
 
-.h2 {
+.h2-title {
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 1.8rem;
 }
 
 @media (max-width: 1000px) {
@@ -110,6 +115,13 @@ div .images {
   }
   .container-header {
     display: flex;
+  }
+  .h3 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
   }
 }
 
@@ -154,6 +166,6 @@ div .images {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 }
