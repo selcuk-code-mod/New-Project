@@ -19,6 +19,9 @@ body {
   background-color: #f6f9fe;
   position: relative;
 }
+button {
+  cursor: pointer;
+}
 
 .container {
   margin: 30px 60px;
@@ -71,10 +74,16 @@ div .images {
   justify-content: center;
   align-items: center;
 }
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
 .main-content {
-  width: 100%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,6 +131,14 @@ div .images {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+  }
+  .main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
 }
 
