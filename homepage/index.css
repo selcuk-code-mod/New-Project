@@ -85,6 +85,9 @@ div .images {
   width: 100%;
   height: 75vh;
 }
+.hit-services {
+  padding: 60px 0;
+}
 
 .hit-services .h1 {
   color: black;

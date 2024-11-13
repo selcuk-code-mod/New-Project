@@ -27,6 +27,9 @@ body {
   margin: 24px 40px;
 }
 
+.section-container {
+  padding-top: 60px;
+}
 .section-title {
   text-align: center;
   margin-top: 3rem;

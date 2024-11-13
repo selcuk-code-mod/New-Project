@@ -53,6 +53,9 @@
 .communication {
   padding: 4rem 0px;
 }
+.section-card {
+  padding: 40px 0;
+}
 
 .section-card-footer {
   display: flex;

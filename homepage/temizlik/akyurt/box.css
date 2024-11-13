@@ -24,12 +24,13 @@
 .box-logo {
   max-height: 40px;
   border: 1px solid white;
-  border-radius: 10%;
+  border-radius: 50%;
   background-color: white;
   margin: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0px;
 }
 .box-head {
   display: flex;
@@ -54,6 +55,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+}
+.card-footer {
+  margin-top: 40px;
 }
 .card-address {
   padding-bottom: 30px;
